@@ -55,11 +55,6 @@ class FocusApplication : LocaleAwareApplication(), CoroutineScope {
     var visibilityLifeCycleCallback: VisibilityLifeCycleCallback? = null
         private set
 
-    override fun onTerminate() {
-        job.cancel()
-        super.onTerminate()
-    }
-
     override fun onCreate() {
         super.onCreate()
 
